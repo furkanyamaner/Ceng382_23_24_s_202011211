@@ -1,0 +1,59 @@
+body{
+font-family: Arial, sans-serif;
+            background-color: #cbff3c;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 75rem;
+        }
+        h1 {
+            position:absolute;
+            padding-bottom: 40rem;
+            margin: 8px 0;
+            
+        }
+        #loginForm {
+            background-color: #b4b4b4;
+            padding: 20px;
+            border-radius: 8px;
+            width: 50%;
+            
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 20px;
+            margin: 8px 0;
+            border: 5px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #0099ff;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        
+        
