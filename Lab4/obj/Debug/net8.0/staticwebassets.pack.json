@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "c:\\Users\\c2011211\\Desktop\\lab4\\Ceng382_23_24_s_202011211\\Lab4\\wwwroot\\js\\site2.js",
+      "PackagePath": "staticwebassets\\js\\site2.js"
+    },
+    {
       "Id": "c:\\Users\\c2011211\\Desktop\\lab4\\Ceng382_23_24_s_202011211\\Lab4\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

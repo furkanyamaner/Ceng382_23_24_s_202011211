@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XD9Es6d6xsDOrtONr5rtck8txR0O7KMXNUrFUR6U5gA=",
+  "Hash": "mxKnBdVy3gAOQuLsioYyzG1asDCnpeZjMc7niQBgOhc=",
   "Source": "Lab4",
   "BasePath": "_content/Lab4",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "c:\\Users\\c2011211\\Desktop\\lab4\\Ceng382_23_24_s_202011211\\Lab4\\wwwroot\\js\\site2.js",
+      "SourceId": "Lab4",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\c2011211\\Desktop\\lab4\\Ceng382_23_24_s_202011211\\Lab4\\wwwroot\\",
+      "BasePath": "_content/Lab4",
+      "RelativePath": "js/site2.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site2.js"
     },
     {
       "Identity": "c:\\Users\\c2011211\\Desktop\\lab4\\Ceng382_23_24_s_202011211\\Lab4\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
