@@ -61,13 +61,20 @@
 
     <div>
         
-            <h2>Login</h2>
-            <input type="text" id="username" placeholder="Username">
-            <input type="text" id="password" placeholder="Password">
-            <button onclick="login()">Login</button>
-            <p id="message"></p>            
+            <button id="gizle" onclick="gizle()">Gizle</button>
+            <button onclick="goster()">Göster</button>
+                  
           
     </div>
+
+    <button onclick="toggleForm()">Formu Göster/Gizle</button>
+    <form id="myForm" style="display: none;">
+    <input type="text" id="input1" placeholder="Sayı 1">
+    <input type="text" id="input2" placeholder="Sayı 2">
+    <button onclick="calculateSum()">Toplamı Hesapla</button>
+    </form>
+
+    <div id="result"></div>
 
 
     
@@ -146,5 +153,5 @@
 
 <div class="b-example-divider"></div>
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script> src="~/js/site2.js"</script>
+<script> src="C:\Users\furka\OneDrive\Masaüstü\lab5\Ceng382_23_24_s_202011211\Lab4\wwwroot\js\site2.js"</script>
     </body>
