@@ -23,6 +23,7 @@ function gizle() {
     }
     
       var sum = input1 + input2;
-      document.getElementById("result").innerText = "Toplam: " + sum;
+      var a = document.getElementById("result").innerText = "Toplam: " + sum;
+      alert(a);
       
   }
