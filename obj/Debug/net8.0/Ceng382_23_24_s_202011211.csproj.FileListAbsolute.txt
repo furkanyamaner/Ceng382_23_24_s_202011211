@@ -1,0 +1,15 @@
+C:\Users\furka\OneDrive\Masaüstü\lab6\Ceng382_23_24_s_202011211\bin\Debug\net8.0\Ceng382_23_24_s_202011211.exe
+C:\Users\furka\OneDrive\Masaüstü\lab6\Ceng382_23_24_s_202011211\bin\Debug\net8.0\Ceng382_23_24_s_202011211.deps.json
+C:\Users\furka\OneDrive\Masaüstü\lab6\Ceng382_23_24_s_202011211\bin\Debug\net8.0\Ceng382_23_24_s_202011211.runtimeconfig.json
+C:\Users\furka\OneDrive\Masaüstü\lab6\Ceng382_23_24_s_202011211\bin\Debug\net8.0\Ceng382_23_24_s_202011211.dll
+C:\Users\furka\OneDrive\Masaüstü\lab6\Ceng382_23_24_s_202011211\bin\Debug\net8.0\Ceng382_23_24_s_202011211.pdb
+C:\Users\furka\OneDrive\Masaüstü\lab6\Ceng382_23_24_s_202011211\obj\Debug\net8.0\Ceng382_23_24_s_202011211.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\furka\OneDrive\Masaüstü\lab6\Ceng382_23_24_s_202011211\obj\Debug\net8.0\Ceng382_23_24_s_202011211.AssemblyInfoInputs.cache
+C:\Users\furka\OneDrive\Masaüstü\lab6\Ceng382_23_24_s_202011211\obj\Debug\net8.0\Ceng382_23_24_s_202011211.AssemblyInfo.cs
+C:\Users\furka\OneDrive\Masaüstü\lab6\Ceng382_23_24_s_202011211\obj\Debug\net8.0\Ceng382_23_24_s_202011211.csproj.CoreCompileInputs.cache
+C:\Users\furka\OneDrive\Masaüstü\lab6\Ceng382_23_24_s_202011211\obj\Debug\net8.0\Ceng382_23_24_s_202011211.sourcelink.json
+C:\Users\furka\OneDrive\Masaüstü\lab6\Ceng382_23_24_s_202011211\obj\Debug\net8.0\Ceng382_23_24_s_202011211.dll
+C:\Users\furka\OneDrive\Masaüstü\lab6\Ceng382_23_24_s_202011211\obj\Debug\net8.0\refint\Ceng382_23_24_s_202011211.dll
+C:\Users\furka\OneDrive\Masaüstü\lab6\Ceng382_23_24_s_202011211\obj\Debug\net8.0\Ceng382_23_24_s_202011211.pdb
+C:\Users\furka\OneDrive\Masaüstü\lab6\Ceng382_23_24_s_202011211\obj\Debug\net8.0\Ceng382_23_24_s_202011211.genruntimeconfig.cache
+C:\Users\furka\OneDrive\Masaüstü\lab6\Ceng382_23_24_s_202011211\obj\Debug\net8.0\ref\Ceng382_23_24_s_202011211.dll
