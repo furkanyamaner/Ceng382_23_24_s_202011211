@@ -1,124 +1,157 @@
 ﻿using System;
-using System.IO;
 using System.Text.Json;
+using System.Text.Json.Serialization;
+using Microsoft.VisualBasic;
+/*
+Single Responsibility Principle: A class should have only one reason to change, meaning it should have only one responsibility. This principle helps to make the code more understandable, maintainable, and reusable.
+Dependency Injection: Dependency Injection states that a class should receive its dependencies from external sources rather than creating them itself. This promotes flexibility in the code and reduces dependencies between classes.
 
-public class Room
+Additionally, the code violated the Dependency Injection Principle because dependencies between classes were tightly coupled and not injected from external sources. For example, the ReservationHandler class had direct dependencies on the Reservation and Room classes, which hindered the ability to inject dependencies from outside.
+
+Understanding why it's important not to comply with these principles is crucial in the context of web applications. Web applications tend to be large and complex. Failing to adhere to the Single Responsibility Principle may lead to each class having many different responsibilities, increasing code complexity. Similarly, not adhering to the Dependency Injection Principle can make testing and maintaining the code more challenging because class dependencies are tightly coupled, making it difficult to make changes.
+*/
+
+/*
+The given UML diagram complicates the code and makes it less flexible. It leads to the creation of numerous objects within the codebase and fails to manage dependencies between classes properly. Additionally, each class in the diagram seems to have multiple responsibilities, which is against the principle of Single Responsibility.
+
+This situation could make the code harder to understand and maintain. Therefore, the code needs to be restructured to adhere to these principles. Restructuring the code involves reducing dependencies between classes and ensuring that each class has only one responsibility. This way, the code becomes more readable, easier to maintain, and more flexible.
+
+*/
+
+public class RoomData
 {
-    public string RoomId { get; set; }
-    public string RoomName { get; set; }
-    public int Capacity { get; set; }
+    [JsonPropertyName("Room")]
+    public Room[]? Rooms { get; set; }
+
+    public Room? GetRoomById(string roomId)
+    {
+        return Rooms?.FirstOrDefault(room => room.GetRoomId() == roomId);
+    }
 }
 
-public class Reservation
-{
-    public DateTime Time { get; set; }
-    public DateTime Date { get; set; }
-    public string ReserverName { get; set; }
-    public Room Room { get; set; }
-}
-
-public class ReservationHandler
-{
-    private Reservation[,] reservations;
-
-    public ReservationHandler(int daysOfWeek, int numberOfRooms)
-    {
-        reservations = new Reservation[daysOfWeek, numberOfRooms];
-    }
-
-    public void AddReservation(Reservation reservation, int dayIndex, int roomIndex)
-    {
-        if (reservations[dayIndex, roomIndex] == null)
-        {
-            reservations[dayIndex, roomIndex] = reservation;
-            Console.WriteLine("Reservation added successfully.");
-        }
-        else
-        {
-            Console.WriteLine("The slot is already reserved.");
-        }
-    }
-
-    public void DeleteReservation(int dayIndex, int roomIndex)
-    {
-        if (reservations[dayIndex, roomIndex] != null)
-        {
-            reservations[dayIndex, roomIndex] = null;
-            Console.WriteLine("Reservation deleted successfully.");
-        }
-        else
-        {
-            Console.WriteLine("No reservation found in the selected slot.");
-        }
-    }
-
-    public void DisplayWeeklySchedule()
-    {
-        string[] daysOfWeek = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
-
-        for (int i = 0; i < reservations.GetLength(0); i++)
-        {
-            Console.WriteLine(daysOfWeek[i] + ":");
-
-            for (int roomBlock = 0; roomBlock < reservations.GetLength(1); roomBlock += 4)
-            {
-                for (int j = roomBlock; j < roomBlock + 4 && j < reservations.GetLength(1); j++)
-                {
-                    if (reservations[i, j] != null)
-                        Console.Write($"Room {reservations[i, j].Room.RoomName} - {reservations[i, j].ReserverName} ({reservations[i, j].Time.ToString("hh:mm tt")})\t");
-                    else
-                        Console.Write($"Room {j + 1}: Empty\t");
-                }
-                Console.WriteLine();
-            }
-            Console.WriteLine();
-        }
-    }
-}
 
 class Program
 {
+    static void generateReservation(int year,int mounth,int day,int hour,string str,Reservation reservation,Room room1){
+        DateTime desiredDate = new DateTime(year, mounth, day, hour, 0, 0);
+            DateTime ToDay = DateTime.Today;
+           
+
+            if (desiredDate < ToDay && desiredDate.Hour<ToDay.Hour)
+            {
+                Console.WriteLine("date invalid.");
+            }
+            else{
+                 TimeSpan fark = desiredDate - ToDay;
+              if (fark.TotalDays > 7)
+                 {
+                  Console.WriteLine($"Enter Between 1-7");
+               }
+              else
+              {
+                  
+                reservation.SetDate(desiredDate);
+                reservation.SetTime(desiredDate);
+                reservation.SetReserverName(str);
+                reservation.SetRoom(room1);
+                
+                
+                Console.WriteLine(reservation.GetTime());
+              }
+                 
+            }
+    }
     static void Main(string[] args)
     {
-        Room[] rooms = LoadRoomsFromJson("Data.json");
-
-        ReservationHandler reservationHandler = new ReservationHandler(7, rooms.Length);
-
-        AddReservations(reservationHandler, rooms);
-
-        reservationHandler.DisplayWeeklySchedule();
-    }
-
-    static Room[] LoadRoomsFromJson(string filePath)
-    {
-        using (StreamReader r = new StreamReader(filePath))
+        
+       
+        string jsonFilePath = "Data.json";
+        RoomHandler _roomHandler = new RoomHandler(jsonFilePath);
+       
+        RoomData roomData = _roomHandler.GetRooms();
+        
+        
+        string logFilePath = "LogData.json";
+        try
         {
-            string json = r.ReadToEnd();
-            var data = JsonDocument.Parse(json);
-            var roomArray = data.RootElement.GetProperty("Room").ToString();
-            return JsonSerializer.Deserialize<Room[]>(roomArray);
-        }
-    }
-
-    static void AddReservations(ReservationHandler handler, Room[] rooms)
-    {
-        DateTime currentTime = DateTime.Now;
-
-        for (int i = 0; i < 7; i++)
-        {
-            for (int j = 0; j < rooms.Length; j++)
+            if (File.Exists(logFilePath))
             {
-                Reservation reservation = new Reservation
-                {
-                    Time = currentTime.AddHours(j + 9),
-                    Date = DateTime.Today.AddDays(i),
-                    ReserverName = "Furkan Yamaner",
-                    Room = rooms[j]
-                };
-
-                handler.AddReservation(reservation, i, j);
-                
+                File.WriteAllText(logFilePath, string.Empty);
             }
         }
-    }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error {ex.Message}");
+        }
+        ILogger fileLogger = new FileLogger(logFilePath);
+        LogHandler _logHandler = new LogHandler(fileLogger);
+       
+
+        ReservationRepository reservationrepo = new ReservationRepository(7,21);
+        ReservationHandler reservationhandler = new ReservationHandler(reservationrepo,_logHandler);
+        
+
+        ReservationService reservationService = new ReservationService(reservationhandler);
+        
+        
+
+        if (roomData?.Rooms != null)
+        {
+            Room room1 = roomData.Rooms[0]; 
+            Reservation reservation1 = new Reservation();
+            generateReservation(2024,4,8,12,"Ahmet",reservation1,room1);
+            if (reservation1 == null)
+            {
+                Console.WriteLine("Error");
+            }
+            else
+            {
+                reservationService.AddReservation(reservation1);
+                
+                LogRecord logRecord1 = new LogRecord(reservation1.GetDate(), reservation1.GetReserverName(),reservation1.GetRoom().GetRoomName(), "Add");
+        
+                _logHandler.AddLog(logRecord1);
+                
+            }
+                
+
+            Room room2 = roomData.Rooms[0]; 
+            Reservation reservation2 = new Reservation();
+            generateReservation(2024,4,8,13,"Mehmet",reservation2,room2);
+            if (reservation2 == null)
+            {
+               Console.WriteLine("Error");
+            }
+            else
+            {
+                reservationService.AddReservation(reservation2);
+                
+                LogRecord logRecord2 = new LogRecord(reservation2.GetDate(), reservation2.GetReserverName(),reservation2.GetRoom().GetRoomName(), "Add");
+        
+                _logHandler.AddLog(logRecord2);
+
+            
+            }
+
+            Room room3 = roomData.Rooms[1]; 
+           
+            Reservation reservation3 = new Reservation();
+            generateReservation(2024,4,8,14,"Osman",reservation3,room3);
+            if (reservation3 == null)
+            {
+                Console.WriteLine("Error");            
+            }
+            else
+            {
+                reservationService.AddReservation(reservation3);
+                
+                LogRecord logRecord3 = new LogRecord(reservation3.GetDate(), reservation3.GetReserverName(),reservation3.GetRoom().GetRoomName(), "Add");
+        
+                _logHandler.AddLog(logRecord3);
+            }
+               
+        }
+      
+        
+    }
 }
