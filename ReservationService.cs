@@ -6,6 +6,42 @@ using System.Collections.Generic;
 public class ReservationService()
 {
     
+    public class LogService
+{
+    private static List<Reservation> logs = new List<Reservation>();
+
+    public static List<Reservation> DisplayLogsByName(string name)
+    {
+        List<Reservation> logsByName = new List<Reservation>();
+        foreach (var log in logs)
+        {
+            if (log.GetReserverName() == name)
+            {
+                logsByName.Add(log);
+            }
+        }
+        return logsByName;
+    }
+
+    public static List<Reservation> DisplayLogs(DateTime start, DateTime end)
+    {
+        List<Reservation> logsBetweenDates = new List<Reservation>();
+        foreach (var log in logs)
+        {
+            if (log.GetTime() >= start && log.GetTime() <= end)
+            {
+                logsBetweenDates.Add(log);
+            }
+        }
+        return logsBetweenDates;
+    }
+
+
+    public static void AddLog(Reservation log)
+    {
+        logs.Add(log);
+    }
+}
     private ReservationHandler reservationHandler;
 
     public ReservationService(ReservationHandler handler) : this()
@@ -14,6 +50,33 @@ public class ReservationService()
     
         
     }
+    public List<Reservation> DisplayReservationByReserver(string name)
+    {
+        List<Reservation> reservationsByReserver = new List<Reservation>();
+        foreach (var reservation in reservationHandler.GetAllReservations())
+        {
+            if (reservation.GetReserverName() == name)
+            {
+                reservationsByReserver.Add(reservation);
+            }
+        }
+        return reservationsByReserver;
+    }
+
+    public List<Reservation> DisplayReservationByRoomId(string Id)
+{
+    List<Reservation> reservationsByRoomId = new List<Reservation>();
+    foreach (var reservation in reservationHandler.GetAllReservations())
+    {
+        if (reservation.GetRoom().RoomId == Id)
+        {
+            reservationsByRoomId.Add(reservation);
+        }
+    }
+    return reservationsByRoomId;
+}
+
+    
     
      public void AddReservation(Reservation reservation)
     {
@@ -80,5 +143,6 @@ public class ReservationService()
         Console.WriteLine();
     }
     }
+    
     
 }

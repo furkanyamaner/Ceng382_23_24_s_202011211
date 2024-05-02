@@ -154,4 +154,53 @@ class Program
       
         
     }
+
+/*
+
+public class RoomHandler
+{
+    private string filePath;
+
+    public RoomHandler(string filePath)
+    {
+        this.filePath = filePath;
+    }
+
+    public List<Room> GetRooms()
+    {
+        string jsonString = File.ReadAllText(filePath);
+        var options = new JsonSerializerOptions()
+        {
+            NumberHandling = JsonNumberHandling.AllowReadingFromString | JsonNumberHandling.WriteAsString
+        };
+        RoomData? roomData = JsonSerializer.Deserialize<RoomData>(jsonString, options);
+
+        return roomData?.Rooms?.ToList();
+    }
+
+    public Room? GetRoomById(string roomId)
+    {
+        List<Room> rooms = GetRooms();
+        return rooms?.FirstOrDefault(room => room.GetRoomId() == roomId);
+    }
+
+    public void SaveRooms(List<Room> rooms)
+    {
+        try
+        {
+            string jsonString = JsonSerializer.Serialize(rooms);
+            File.WriteAllText(filePath, jsonString);
+            Console.WriteLine("Saved");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error {ex.Message}");
+        }
+    }
+}
+
+Bu kısım çalışmıyor. Can Hocaya danışılacak.
+*/
+
+
 }

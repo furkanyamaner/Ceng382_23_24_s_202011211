@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\furka\\OneDrive\\Masaüstü\\CENG382\\lab6\\Ceng382_23_24_s_202011211\\Ceng382_23_24_s_202011211.csproj",
+      "projectUniqueName": "C:\\Users\\furka\\OneDrive\\Masaüstü\\CENG382\\lab7\\Ceng382_23_24_s_202011211\\Ceng382_23_24_s_202011211.csproj",
       "projectName": "Ceng382_23_24_s_202011211",
-      "projectPath": "C:\\Users\\furka\\OneDrive\\Masaüstü\\CENG382\\lab6\\Ceng382_23_24_s_202011211\\Ceng382_23_24_s_202011211.csproj",
+      "projectPath": "C:\\Users\\furka\\OneDrive\\Masaüstü\\CENG382\\lab7\\Ceng382_23_24_s_202011211\\Ceng382_23_24_s_202011211.csproj",
       "packagesPath": "C:\\Users\\furka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\furka\\OneDrive\\Masaüstü\\CENG382\\lab6\\Ceng382_23_24_s_202011211\\obj\\",
+      "outputPath": "C:\\Users\\furka\\OneDrive\\Masaüstü\\CENG382\\lab7\\Ceng382_23_24_s_202011211\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\furka\\AppData\\Roaming\\NuGet\\NuGet.Config",
