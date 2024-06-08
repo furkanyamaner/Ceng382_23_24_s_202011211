@@ -1,0 +1,26 @@
+﻿@page
+@model MyApp.Namespace.CreateNewRoomModel
+@{
+}
+
+<h2>New</h2>
+
+<form method="POST">
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Room Name</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="RoomName" value="@Model.rooms.RoomName" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Capacity</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Capacity" value="@Model.rooms.Capacity" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>

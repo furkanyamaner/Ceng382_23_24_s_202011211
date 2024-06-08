@@ -1,0 +1,25 @@
+﻿@page
+@model MyApp.Namespace.ListRoomsModel
+@{
+}
+<br>
+<h2>List of Client</h2>
+<a class='btn btn-primary btn-sm' href='/HERE/CreateNewRoom'>New Client</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>RoomName</th>
+            <th>Capacity</th>
+        </tr>
+    </thead>
+    <tbody>
+         @foreach(var item in Model.listrooms){
+            <tr>
+                <td>@item.Id</td>
+                 <td>@item.RoomName</td>
+                  <td>@item.Capacity</td>
+            </tr>
+         }
+    </tbody>
+</table>
