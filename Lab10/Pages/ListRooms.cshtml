@@ -1,0 +1,23 @@
+﻿@page
+@model MyApp.Namespace.ListRoomsModel
+@{
+}
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>RoomName</th>
+            <th>Capacity</th>
+        </tr>
+    </thead>
+    <tbody>
+         @foreach(var item in Model.listrooms){
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.RoomName</td>
+                <td>@item.Capacity</td>
+            </tr>
+         }
+    </tbody>
+</table>
