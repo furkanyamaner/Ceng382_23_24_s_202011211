@@ -5,6 +5,8 @@ using System;
 using Microsoft.AspNetCore.Authorization;
 using MyApp.Models;
 
+
+
 namespace MyApp.Namespace
 {
     [Authorize] 
@@ -42,8 +44,11 @@ namespace MyApp.Namespace
                         command.Parameters.AddWithValue("@Capacity", rooms.Capacity);
                         command.ExecuteNonQuery();
                     }
+                    
                 }
+                LogHelper.Log($"Yeni oda yaratıldı: {rooms.RoomName}, Kapasite: {rooms.Capacity}");
             }
+            
             catch (Exception ex)
             {
                 errorMessage = ex.Message;

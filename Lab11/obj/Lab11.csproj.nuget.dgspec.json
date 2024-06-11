@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\furka\\OneDrive\\Masaüstü\\CENG382\\lab11\\Ceng382_23_24_s_202011211\\Lab11\\Lab11.csproj": {}
+    "c:\\Users\\furka\\OneDrive\\Masaüstü\\labfinal\\Ceng382_23_24_s_202011211\\Lab11\\Lab11.csproj": {}
   },
   "projects": {
-    "c:\\Users\\furka\\OneDrive\\Masaüstü\\CENG382\\lab11\\Ceng382_23_24_s_202011211\\Lab11\\Lab11.csproj": {
+    "c:\\Users\\furka\\OneDrive\\Masaüstü\\labfinal\\Ceng382_23_24_s_202011211\\Lab11\\Lab11.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\furka\\OneDrive\\Masaüstü\\CENG382\\lab11\\Ceng382_23_24_s_202011211\\Lab11\\Lab11.csproj",
+        "projectUniqueName": "c:\\Users\\furka\\OneDrive\\Masaüstü\\labfinal\\Ceng382_23_24_s_202011211\\Lab11\\Lab11.csproj",
         "projectName": "Lab11",
-        "projectPath": "c:\\Users\\furka\\OneDrive\\Masaüstü\\CENG382\\lab11\\Ceng382_23_24_s_202011211\\Lab11\\Lab11.csproj",
+        "projectPath": "c:\\Users\\furka\\OneDrive\\Masaüstü\\labfinal\\Ceng382_23_24_s_202011211\\Lab11\\Lab11.csproj",
         "packagesPath": "C:\\Users\\furka\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\furka\\OneDrive\\Masaüstü\\CENG382\\lab11\\Ceng382_23_24_s_202011211\\Lab11\\obj\\",
+        "outputPath": "c:\\Users\\furka\\OneDrive\\Masaüstü\\labfinal\\Ceng382_23_24_s_202011211\\Lab11\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\furka\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -8292,11 +8292,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\furka\\OneDrive\\Masaüstü\\CENG382\\lab11\\Ceng382_23_24_s_202011211\\Lab11\\Lab11.csproj",
+      "projectUniqueName": "C:\\Users\\furka\\OneDrive\\Masaüstü\\labfinal\\Ceng382_23_24_s_202011211\\Lab11\\Lab11.csproj",
       "projectName": "Lab11",
-      "projectPath": "C:\\Users\\furka\\OneDrive\\Masaüstü\\CENG382\\lab11\\Ceng382_23_24_s_202011211\\Lab11\\Lab11.csproj",
+      "projectPath": "C:\\Users\\furka\\OneDrive\\Masaüstü\\labfinal\\Ceng382_23_24_s_202011211\\Lab11\\Lab11.csproj",
       "packagesPath": "C:\\Users\\furka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\furka\\OneDrive\\Masaüstü\\CENG382\\lab11\\Ceng382_23_24_s_202011211\\Lab11\\obj\\",
+      "outputPath": "C:\\Users\\furka\\OneDrive\\Masaüstü\\labfinal\\Ceng382_23_24_s_202011211\\Lab11\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\furka\\AppData\\Roaming\\NuGet\\NuGet.Config",

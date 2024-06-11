@@ -1,25 +1,43 @@
 ﻿@page
 @model MyApp.Namespace.ListRoomsModel
 @{
+    ViewData["Title"] = "Oda Listesi";
 }
-<br>
-<h2>List of Client</h2>
-<a class='btn btn-primary btn-sm' href='/HERE/CreateNewRoom'>New Client</a>
+
+<h2>Oda Listesi</h2>
+
+<form method="get">
+    <div class="form-group">
+        <label for="searchTerm">Oda Adı:</label>
+        <input type="text" name="searchTerm" id="searchTerm" value="@Model.SearchTerm" class="form-control" />
+    </div>
+    
+
+    <!-- <div class="form-group">
+        <label for="capacityTerm">Kapasite:</label>
+        <input type="number" name="capacityTerm" id="capacityTerm" value="modelcapacityterm" class="form-control" />
+    </div> -->
+
+    <button type="submit" class="btn btn-primary">Filtrele</button>
+</form>
+
+
 <table class="table">
     <thead>
         <tr>
             <th>ID</th>
-            <th>RoomName</th>
-            <th>Capacity</th>
+            <th>Oda Adı</th>
+            <th>Kapasite</th>
         </tr>
     </thead>
     <tbody>
-         @foreach(var item in Model.listrooms){
+        @foreach (var item in Model.ListRooms)
+        {
             <tr>
                 <td>@item.Id</td>
-                 <td>@item.RoomName</td>
-                  <td>@item.Capacity</td>
+                <td>@item.RoomName</td>
+                <td>@item.Capacity</td>
             </tr>
-         }
+        }
     </tbody>
 </table>
